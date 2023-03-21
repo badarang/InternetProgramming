@@ -1,0 +1,152 @@
+header {
+    height: 60px;
+    font-size: 40px; 
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    background-color: #5A5A5A;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+main {
+    display: flex;
+}
+
+main nav {
+    width: 20%;
+    padding-right: 20px;
+    overflow: auto;
+}
+
+main button {
+    margin-left: 30px;
+    width: 64px;
+    height: 20px;
+}
+
+.container {
+    width: 80%;
+}
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th, td:not(.clickme) {
+    border: 1px solid;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: all ease-in-out .2s;
+}
+
+.clickme {
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.clickme:not(:hover) {
+    animation: flip 2s linear infinite;
+}
+
+.clickme:hover {
+    cursor: pointer;
+    animation: wiggle 1.5s linear infinite;
+}
+
+.message {
+    position: absolute;
+    top: 180px;
+    left: 162px;
+    z-index: 5;
+    font-size: 12px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 50px;
+    text-align: center;
+    padding: 3px;
+    box-shadow: 2px 2px 2px gray;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(0deg);
+    }
+    75% {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes wiggle {
+    0% { transform: scale(1, 1); }
+    5% { transform: rotate(15deg); }
+    10% { transform: rotate(-15deg); }
+    15% { transform: rotate(15deg); }
+    20% { transform: rotate(-15deg); }
+    30% { transform: rotate(0deg); }
+}
+
+td:hover:not(.clickme) {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: #5A5A5A;
+    text-align: center;
+    padding: 5px 0px;
+    margin-top: 20px;
+    color: white;
+}
+
+.detail_container {
+    display: flex;
+}
+
+.detail_container > p {
+    font-size: 150px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-top: 0px;
+    padding-left: 0px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+}
+
+.inline {
+    display: inline;
+}
+
+.edit__remove {
+    position: relative;
+    left: 120px;
+    top: 340px;
+}
+
+.edit__remove > p {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+    display: inline;
+    height: 50px;
+}
