@@ -9,9 +9,13 @@ header {
     background-color: #5A5A5A;
 }
 
+.a__title, .a__clickme {
+    color: white;
+}
+
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 body {
@@ -149,4 +153,48 @@ footer {
     color: blue;
     display: inline;
     height: 50px;
+}
+
+li > span {
+    display: inline-block;
+    width: 90px;
+}
+
+
+.btn__clipArtAdd {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    position: relative;
+    left: 348px;
+}
+
+.p__clipart {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input__clipart {
+    width: 90%;
+    height: 90%;
+    font-size: 100px;
+}
+
+li {
+    padding-bottom: 5px;
+}
+
+form {
+    display: flex;
+}
+
+.form__submit {
+    position: relative;
+    left: 120px;
+    top: 240px;
+    width: 40px;
+    height: 20px;
 }

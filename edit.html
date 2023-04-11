@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>ClickClip</title>
+</head>
+<body>
+    <script>
+        window.onload = () => {
+            document.querySelector(".form__date").value = new Date().toISOString().substring(0, 10);
+            document.querySelector("#myform").addEventListener("submit", () => {
+                str = "";
+                //str += "클립아트: " + document.getElementByClassName("input__clipart").value + "\n";
+                let ulArr = document.querySelectorAll("li");
+                for (var i=0; i<ulArr.length; i++) {
+                    if (ulArr[i].querySelector("input")) {
+                        if (ulArr[i].innerText == " P") str += "Point: ";
+                        else str += ulArr[i].innerText;
+                        str += ulArr[i].querySelector("input").value + "\n";
+                    }
+                }
+                alert(str);
+            })
+        }
+    </script>
+    <header><a class="a__title" href="index.html">ClickClip</a></header>
+    <main>
+        <div class="detail_container">
+            <form id="myform" method="get">
+                <p class="p__clipart"><input name="asd" class="input__clipart" type="text"></p>
+                <ul>
+                    <li>카테고리: <input type="text" class="form__category"></li>
+                    <li>제목: <input type="text" class="form__title"></li>
+                    <li>등록일자: <input type="date" class="form__date" readonly></li>
+                    <br><br>
+                    <li>Uploaded by 오해인<br></li>
+                    <li class="inline"><input type="text" class="form__point"> P</li>
+                </ul>
+                <input class="form__submit" type="submit" value="제출">
+            </form>
+        </div>
+        
+    </main>
+    
+    <footer>Copyright 2023. Haein Oh. all rights reserved. </footer>
+</body>
+</html>

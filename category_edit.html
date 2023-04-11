@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>ClickClip</title>
+</head>
+<script>
+    window.onload = () => {
+        let str = "";
+        document.querySelector("#form__category").addEventListener("submit", () => {
+            str += document.querySelector(".category__name").value;
+            alert(str);
+        })
+    }
+</script>
+<body>
+    <header><a class="a__title" href="index.html">ClickClip</a></header>
+    <main>
+        <div class="detail_container">
+            <ul>
+                <li><span>사람(20)</span><button>수정</button><button>삭제</button></li>
+                <li><span>동물(12)</span><button>수정</button><button>삭제</button></li>
+                <li><span>식물(4)</span><button>수정</button><button>삭제</button></li>
+                <li><span>음식(2)</span><button>수정</button><button>삭제</button></li>
+                <li><span>풍경(11)</span><button>수정</button><button>삭제</button></li>
+                <li><span>전자기기(6)</span><button>수정</button><button>삭제</button></li>
+                <li><span>아이콘(49)</span><button>수정</button><button>삭제</button></li>
+                <li><span>음식(2)</span><button>수정</button><button>삭제</button></li>
+                <br>
+                <form id="form__category">
+                    <input class="category__name" type="text">&nbsp;
+                    <input type="submit" value="등록">
+                </form>
+                
+            </ul>
+        </div>
+    </main>
+    
+    <footer>Copyright 2023. Haein Oh. all rights reserved. </footer>
+</body>
+</html>
